@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic metadata for the HTML document-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+
+    <!-- Importing bootstrap for styling and layout-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <!-- Importing Font Awesome for icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <!-- Link to custom css for additional styles-->
+    <link rel="stylesheet" href="student.css">
+</head>
+
+<body style="background-color: rgb(178, 239, 241);">
+    <CENTER>
+        <h1>Student Registration System</h1>
+        <p>Enter student details</p>
+    </CENTER>
+    <table>
+        <tr>
+            <!--Student form section-->
+            <td>
+                <h3>Student form</h3>
+                <form id="form">
+                    <input type="hidden" name="id" id="id">
+                    <label for="">Full name</label>
+                    <input type="text" placeholder="Enter the user name" class="form-control" name="name" id="name" required>
+                    <br>
+                    <label for="">Id:</label>
+                    <input type="text" placeholder="Enter student id" class="form-control" name="stdId" id="stdId" required>
+                    <br>
+                    <label for="">Class:</label>
+                    <input type="text" placeholder="Enter class" class="form-control" name="stdClass" id="stdClass" required>
+                    <br>
+                    <label for="">Roll no:</label>
+                    <input type="text" placeholder="Enter the roll no" class="form-control" name="rollNo" id="rollNo" required>
+                    <br>
+                    <label for="">Email:</label>
+                    <input type="email" placeholder="Enter email" class="form-control" name="email" id="email" required>
+                    <br>
+                    <label for="">Contact No:</label>
+                    <input type="text" placeholder="Enter contact number" class="form-control" name="contactNo" id="contactNo" required>
+                    <br>
+                    <div class="form-action-buttons">
+                        <button class="btn btn-sm btn-primary" type="button" onclick="save()">Save</button>
+                        <button class="btn btn-sm btn-primary" type="button" onclick="clearData()">Reset</button>
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="image">
+                    <center><img width="700px" src="students.jpeg" alt="" srcset=""></center>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Table to display the list of students-->
+     <div class="table-container"><!-- Scroll bar appears above size of 200px-->
+        <table class="list" id="stdlist" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Id</th>
+                    <th>Class</th>
+                    <th>Roll No</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="table">
+    
+            </tbody>
+        </table>
+     </div>
+    <!-- Linking to JavaScript-->
+    <script src="student.js"></script>
+</body>
+
+</html>
